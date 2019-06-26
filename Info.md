@@ -7,3 +7,5 @@ EOSIO is designed to have low latency
 EOSIO based blockchains are upgradeable. This means developers can deploy code fix, add features, and/or change application logic, as long as sufficient authority is provide
 Governance and resource allocation are programmed via smart contracts
 
+
+

@@ -1,6 +1,8 @@
 1. install Binaries
+
 brew tap eosio/eosio
 brew install eosio
+sudo chown -R $(whoami) $(brew --prefix)/*
 
 2. Boot Node and Wallet
 Keosd is a key manager for EOSIO accounts that comes with EOSIO.

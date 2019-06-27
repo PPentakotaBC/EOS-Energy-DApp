@@ -21,6 +21,7 @@ nodeos -e -p eosio \
 --access-control-allow-origin='*' \
 --contracts-console \
 --http-validate-host=false \
+--delete-all-blocks \
 --verbose-http-errors >> nodeos.log 2>&1 &
 
 adds 3 plugin's, ssl false and no logs
@@ -33,3 +34,39 @@ cleos wallet list
 
 6.
 curl http://localhost:8888/v1/chain/get_info
+
+7. 
+brew tap eosio/eosio.cdt
+brew install eosio.cdt
+
+8.
+git clone --recursive https://github.com/eosio/eosio.cdt --branch v1.6.1 --single-branch
+cd eosio.cdt
+
+9.
+./build.sh
+10.
+sudo ./install.sh
+
+11.
+cleos wallet create --to-console
+PW5KjyB67z5hDXFzYkMjHN6vk7XTPQvaDnjUmqqHkMZ6bzsRTLTn9
+
+12.
+cleos wallet open
+
+13.
+cleos wallet list
+cleos wallet unlock
+cleos wallet list
+cleos wallet create_key
+cleos wallet import
+
+14.
+cleos create account eosio bob EOS88AeQo5gkvvj1YfDqQAgvyzvyUVHioKL6vuPKSHbnvSDkzwFCk 
+cleos create account eosio alice EOS88AeQo5gkvvj1YfDqQAgvyzvyUVHioKL6vuPKSHbnvSDkzwFCk
+If nodeos stops, rerun it again using the nodeos --hard-replay command
+
+
+Troubleshooting:
+

@@ -28,8 +28,12 @@ sudo chown -R $(whoami) $(brew --prefix)/*
   
  <h2>Install EOSIO</h2>
   brew tap eosio/eosio.cdt
-  brew install eosio.cdt 
-  
+  brew install eosio.cdt
+  git clone --recursive https://github.com/eosio/eosio.cdt --branch v1.6.1 --single-branch
+  cd eosio.cdt<br/>
+  ./build.sh<br/>
+  sudo ./install.sh<br/>
+ 
  <h2>Developement Wallet Creation</h2>
    <h3>Create a wallet</h3>
    cleos wallet create --to-console //save the password once generated.
@@ -43,5 +47,10 @@ sudo chown -R $(whoami) $(brew --prefix)/*
     cleos create account eosio energytrade EOS88AeQo5gkvvj1YfDqQAgvyzvyUVHioKL6vuPKSHbnvSDkzwFCk<br/>
     cleos create account eosio pradeep EOS88AeQo5gkvvj1YfDqQAgvyzvyUVHioKL6vuPKSHbnvSDkzwFCk<br/>
     cleos create account eosio prasun EOS88AeQo5gkvvj1YfDqQAgvyzvyUVHioKL6vuPKSHbnvSDkzwFCk<br/>
-   
- 
+  
+ <h1>Running Energy Trade Application</h1>
+    Clone the https://github.com/PPentakotaBC/EOS-Energy-DApp.git repo
+    <h2>Compile the energytrade.cpp file</h2>
+      eosio-cpp --abigen energytrade.cpp -o energytrade.wasm
+      It will generate the WebAssembly virtual machine needed to execute the energytrade smart contract code.
+    

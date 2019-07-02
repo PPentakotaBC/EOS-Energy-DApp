@@ -70,3 +70,5 @@ sudo chown -R $(whoami) $(brew --prefix)/*
       <h2>Monitor Energy Units</h2>
         cleos push action energytrade eumonitor '["energytrade", "prasun", 500 ]' -p energytrade@active -p pradeep@active -p prasun@active<br/>
         cleos push action energytrade eumonitor '["energytrade", "pradeep", 500 ]' -p energytrade@active -p pradeep@active -p prasun@active
+      <h2>Data Storage</h2>
+        cleos get table energytrade energytrade people

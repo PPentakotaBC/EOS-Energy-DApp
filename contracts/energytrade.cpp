@@ -70,7 +70,6 @@ public:
         //subtract the balance from the giver account
         if(row.eubalance == 0){
           row.eubalance = row.eugenerated - eutransfer;
-          row.eugenerated = row.eubalance;
         }
         else{
           row.eubalance = row.eubalance - eutransfer;

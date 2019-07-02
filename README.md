@@ -53,4 +53,12 @@ sudo chown -R $(whoami) $(brew --prefix)/*
     <h2>Compile the energytrade.cpp file</h2>
       eosio-cpp --abigen energytrade.cpp -o energytrade.wasm
       It will generate the WebAssembly virtual machine needed to execute the energytrade smart contract code.
-    
+    <h2>Create or Update the contract to the account</h2>
+      cleos set contract energytrade ./ -p energytrade@active
+     <h2>Register the Energy Meters</h2>
+       <h3>Register energytrade account</h3>
+        cleos push action energytrade regmeter '["energytrade", "Energy Trade", "Solar panel city, Hyderabad, Telangana", 10000, 0, 0]' -p energytrade@active --json
+       <h3>Register pradeep user account</h3>
+        cleos push action energytrade regmeter '["pradeep", "Pradeep Pentakota", "Hi-Tech City, Hyderabad, Telangana", 0, 0, 0]' -p energytrade@active --json
+       <h3>Register prasun user account</h3>
+        cleos push action energytrade regmeter '["prasun", "Prasun Anand", "E-City, Bangalore, Karnataka", 0, 0, 0]' -p energytrade@active --json

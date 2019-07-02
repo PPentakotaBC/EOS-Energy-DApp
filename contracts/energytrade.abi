@@ -1,0 +1,146 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "erase",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "eumonitor",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "eubalance",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "person",
+            "base": "",
+            "fields": [
+                {
+                    "name": "key",
+                    "type": "name"
+                },
+                {
+                    "name": "full_name",
+                    "type": "string"
+                },
+                {
+                    "name": "fulladdress",
+                    "type": "string"
+                },
+                {
+                    "name": "eugenerated",
+                    "type": "uint64"
+                },
+                {
+                    "name": "eutransfer",
+                    "type": "uint64"
+                },
+                {
+                    "name": "eubalance",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "regmeter",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "full_name",
+                    "type": "string"
+                },
+                {
+                    "name": "fulladdress",
+                    "type": "string"
+                },
+                {
+                    "name": "eugenerated",
+                    "type": "uint64"
+                },
+                {
+                    "name": "eutransfer",
+                    "type": "uint64"
+                },
+                {
+                    "name": "eubalance",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "transfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "eutransfer",
+                    "type": "uint64"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "erase",
+            "type": "erase",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "eumonitor",
+            "type": "eumonitor",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "regmeter",
+            "type": "regmeter",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "transfer",
+            "type": "transfer",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "people",
+            "type": "person",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}

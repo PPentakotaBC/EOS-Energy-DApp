@@ -62,3 +62,11 @@ sudo chown -R $(whoami) $(brew --prefix)/*
         cleos push action energytrade regmeter '["pradeep", "Pradeep Pentakota", "Hi-Tech City, Hyderabad, Telangana", 0, 0, 0]' -p energytrade@active --json
        <h3>Register prasun user account</h3>
         cleos push action energytrade regmeter '["prasun", "Prasun Anand", "E-City, Bangalore, Karnataka", 0, 0, 0]' -p energytrade@active --json
+      <h2>Transfer Energy Units</h2>
+        <h3>Transfer 500 Energy Units from energytrade account to prasun account</h3>
+          cleos push action energytrade transfer '["energytrade", "prasun", 500 ]' -p energytrade@active -p pradeep@active -p prasun@active
+        <h3>Transfer 1000 Energy Units from energytrade account to prasun account</h3>
+          cleos push action energytrade transfer '["energytrade", "prasun", 500 ]' -p energytrade@active -p pradeep@active -p prasun@active
+      <h2>Monitor Energy Units</h2>
+        cleos push action energytrade eumonitor '["energytrade", "prasun", 500 ]' -p energytrade@active -p pradeep@active -p prasun@active<br/>
+        cleos push action energytrade eumonitor '["energytrade", "pradeep", 500 ]' -p energytrade@active -p pradeep@active -p prasun@active
